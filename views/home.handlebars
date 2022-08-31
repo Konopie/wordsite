@@ -1,15 +1,8 @@
-<div class="row">
+
+<div class="col-md-11">
     <h1 id="welcome">Welcome to WordSite {{username}}</h1>
     <p id="user-name"></p>
     <p>We let you post words.</p>
-</div>
-
-<div id="search-constainer">
-  <h3>Search For User Posts:</h3>
-  <p>Search</p>
-  <input id="search-bar"></input></br>
-  <button id="search-btn">Submit</button>
-  <button id="all-posts-btn">View All Posts</button>
 </div>
 
 <div class="post-list">
@@ -20,6 +13,3 @@
   {{/each}}
 </div>
 
-{{#if loggedIn}}
-  <script src="/assets/js/index.js"></script>
-{{/if}}

@@ -11,7 +11,7 @@
 }
 
 .post{
-    text-align: left;
+    text-align: center;
 }
 
 .comments{
@@ -35,6 +35,19 @@
 }
 
 #logout > *{
+    text-decoration: none;
+    color: black;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+}
+
+.btn {
+    margin: 5px;
+    border: 1px, solid, black;
+    background-color: lightgrey;
     text-decoration: none;
     color: black;
 }

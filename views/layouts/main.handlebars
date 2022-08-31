@@ -16,19 +16,29 @@
       <h1>
         <a href="/" class="text-warning">WordSite</a>
       </h1>
-       <nav>
-        <button id="logout" class="btn-no-style"><a href="/login">logout</a></button>
-        {{#if loggedIn}}
-        <button id="new-post" class="btn-no-style"><a href="/create-post">Create New Post</a></button>
-        {{/if}}
-      </nav>
     </header>  
 
+
+<div class = "col-md-1">
+<button class="btn"><a class='link' href="/">home</a></button>
+<button class='btn' id='dash-btn'>dashbord</button>
+
+{{#if loggedIn}}
+ <button id="logout" class="btn"><a class="link" href="/login">logout</a></button>
+ {{else}}
+ <button id="logIn" class="btn"><a class="link" href="/login">login</a></button>
+{{/if}}
+</div>
+
     {{{body}}}
+
+
     
   </div>
   <script src="/assets/js/index.js"></script>
+  {{#if loggedIn}}
   <script src="/assets/js/logout.js"></script>
+  {{/if}}
 </body>
 
 <footer class="footer">

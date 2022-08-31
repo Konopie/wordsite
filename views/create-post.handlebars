@@ -1,12 +1,47 @@
+
+
 <div class="col-md-10">
     <h1>Create A Post:</h1>
     <form>
-        <label for="post-text">Text</label>
+        <label for="post-text">Title</label>
         <input type="text" id="post-text" name="post-text"><br>
-        <label for="post-link">Link to Website</label>
+        <label for="post-link">Text</label>
         <input type="text" id="post-link" name="post-link"><br>
-        <input type="button" value="post" id="post-submit">
+        <input type="button" value="post" id="post">
     </form>
 </div>
+
+<script type = "text/javascript">
+const {getUserId, getUserPosts, renderPostList} = require('./assets/js/posts.js')
+
+document.querySelector('.delete').addEventListener('click', (id)=>{
+fetch(`/api/post/${id}`, {
+  method: 'delete',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+});
+})
+document.querySelector('#post').addEventListener('click', (id)=>{
+fetch(`/api/post/${id}`, {
+  method: 'delete',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+});
+})
+
+console.log({{username}})
+console.log({{user.username}})
+
+
+getUserId({{username}})
+.then(userID =>{
+    getUserPosts(userID)
+})
+.then(userPosts =>{
+    renderPostList(userPosts)
+})
+</script>
 
 <script src="/assets/js/new-post.js"></script>

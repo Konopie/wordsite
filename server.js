@@ -51,8 +51,13 @@ app.get('/posts', (req, res)=>{
     res.render('posts');
 })
 
+app.get('/create-post', (req, res)=>{
+      
+    res.render('create-post');
+})
+
 //turn on the connection to the db server
 sequelize.sync({force: true}).then(() => {
     app.listen(PORT, () => console.log('Now listening'));
-    // seedAll();
+    seedAll();
 })
