@@ -4,6 +4,9 @@ const searchBar = document.getElementById('search-bar')
 const welcome = document.getElementById('welcome');
 const wrapper = document.getElementById('wrapper');
 
+console.log(document.getElementById('user').innerHTML);
+console.log(document.querySelector('#user').innerHTML);
+
 let postTitle;
 let postText;
 let postListItems = [];
@@ -110,6 +113,16 @@ const getAndRenderPosts = () => getPosts()
 });
 
 
+getUserId(document.getElementById('user').innerHTML)
+.then(userId => {
+  console.log(userId)
+  return getUserPosts(userId)
+})
+.then(userPosts => {
+  console.log(userPosts)
+  renderPostList(userPosts)
+})
+
 // getAndRenderPosts();
 
-module.exports = {getUserId, getUserPosts, renderPostList}
+// module.exports = {getUserId, getUserPosts, renderPostList}

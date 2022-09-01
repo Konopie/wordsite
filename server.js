@@ -48,7 +48,7 @@ app.get('/posts', (req, res)=>{
         return;
       }
       
-    res.render('posts');
+    res.render('posts', { loggedIn: req.session.loggedIn, username: req.session.username });
 })
 
 app.get('/create-post', (req, res)=>{
