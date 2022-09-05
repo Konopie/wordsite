@@ -14,17 +14,9 @@
 <script type = "text/javascript">
 const {getUserId, getUserPosts, renderPostList} = require('./assets/js/posts.js')
 
-document.querySelector('.delete').addEventListener('click', (id)=>{
-fetch(`/api/post/${id}`, {
-  method: 'delete',
-  headers: {
-    'Content-Type': 'application/json',
-  },
-});
-})
 document.querySelector('#post').addEventListener('click', (id)=>{
 fetch(`/api/post/${id}`, {
-  method: 'delete',
+  method: 'post',
   headers: {
     'Content-Type': 'application/json',
   },

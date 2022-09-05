@@ -13,6 +13,23 @@
 
 {{> comments post.comments}}
 
+
+{{#if usersPost}}
+  <button class="delete">Delete Post</button>
+  <div class="col-md-10">
+    <h1>Edit the Post:</h1>
+    <form>
+        <label for="post-text">Title</label>
+        <input type="text" id="post-text" name="post-text"><br>
+        <label for="post-link">Text</label>
+        <input type="text" id="post-link" name="post-link"><br>
+        <input type="button" value="post" id="post">
+    </form>
+</div>
+{{/if}}
+
 {{#if loggedIn}}
+<script src="/assets/js/edit-post.js"></script>
 <script src="/assets/js/comment.js"></script>
 {{/if}}
+

@@ -12,7 +12,7 @@ const createNewPost = function (){
     })
 
     fetch('/api/post' , {
-        method: 'post',
+        method: 'put',
         body: JSON.stringify({
             post_text: postText,
             post_url: postLink

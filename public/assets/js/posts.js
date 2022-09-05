@@ -54,6 +54,7 @@ const getUsername = (id) => {
       })
 }
 
+
 // Render the list of post titles
 const renderPostList = async (posts) => {
   let jsonPosts = posts
@@ -67,7 +68,7 @@ const renderPostList = async (posts) => {
    let postListItems = []
 
     // Returns HTML element 
-    const createLi = async (user_id, post_text, post_url) => {
+    const createLi = async (id, user_id, post_text, post_url) => {
       const liEl = document.createElement('li');
       liEl.classList.add('card');
   
@@ -88,6 +89,14 @@ const renderPostList = async (posts) => {
       userEl.innerText = await getUsername(user_id);
       liEl.append(userEl);
 
+      const comments = document.createElement('button');
+      comments.innerText = 'comments';
+      const toComments = ()=>{
+        location.assign(`/post/${id}`);
+      }
+      comments.onclick = toComments;
+      liEl.append(comments);
+
 
       return new Promise((resolve, reject)=>{
         resolve(liEl);
@@ -96,7 +105,7 @@ const renderPostList = async (posts) => {
   
   
     for (let i = 0; i < jsonPosts.length; i++) {
-      const li = await createLi(jsonPosts[i].user_id, jsonPosts[i].post_text, jsonPosts[i].post_url);
+      const li = await createLi(jsonPosts[i].id, jsonPosts[i].user_id, jsonPosts[i].post_text, jsonPosts[i].post_url);
       postListItems.push(li);   
     };
 

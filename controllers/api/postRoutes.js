@@ -4,7 +4,7 @@ const sequelize = require('../../config/connection.js')
 
 const router = express.Router()
 
-// GET /api/post    get all posts from the database
+// GET /api/post get all posts from the database
 router.get("/", (req,res) =>{
   Post.findAll(
     {

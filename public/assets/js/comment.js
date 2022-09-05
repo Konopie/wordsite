@@ -26,3 +26,23 @@ async function commentFormHandler(event) {
 }
 
 document.querySelector('.comment-form').addEventListener('submit', commentFormHandler);
+
+document.querySelector('.delete').addEventListener('click', (id)=>{
+    fetch(`/api/post/${id}`, {
+      method: 'delete',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+    })
+
+    document.querySelector('#post').addEventListener('click', (id)=>{
+        fetch(`/api/post/${id}`, {
+          method: 'put',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        });
+        })
+
+        

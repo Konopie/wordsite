@@ -73,12 +73,21 @@ router.get('/post/:id', (req, res)=>{
         return;
       }
 
+       
       // serialize the data
       const post = dbPostData.get({ plain: true });
       console.log(post)
 
+      let usersPost
+      if (req.session.user_id === post.user_id) {
+        usersPost = true
+      }
+      else (
+        usersPost = false
+      )
+
       // pass data to template
-      res.render('single-post', {post, loggedIn: req.session.loggedIn});
+      res.render('single-post', {post, loggedIn: req.session.loggedIn, usersPost, user_id: req.session.user_id});
     })
     .catch(err => {
       console.log(err);
