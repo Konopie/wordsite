@@ -39,6 +39,7 @@ const createNewPost = function (id){
 }
     
 deletePost = (postId)=>{
+    console.log('running delete post')
     fetch(`/api/post/${postId}`, {
     method: 'delete',
     headers: {
