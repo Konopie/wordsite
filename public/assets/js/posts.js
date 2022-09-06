@@ -80,7 +80,7 @@ const renderPostList = async (posts) => {
       const brEl = document.createElement('br');
       liEl.append(brEl);
 
-      const linkEl = document.createElement('a');
+      const linkEl = document.createElement('p');
       linkEl.href = post_url;
       linkEl.innerText = post_url;
       liEl.append(linkEl);
