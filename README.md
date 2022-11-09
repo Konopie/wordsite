@@ -9,3 +9,5 @@
         browser or deployed Heroku site 
         GitHub: Konopie 
         email: codycooper06@gmail.com 
+        
+![Screenshot of wordsite](https://user-images.githubusercontent.com/99047158/200737501-8762705c-ccfa-48fc-9680-8538b32fb63c.png)
