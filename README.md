@@ -1,25 +1,11 @@
 # WordSite 
 
-        * [Description](#description)
-        * [Installation](#installation)
-        * [Usage](#usage)
-        * [License](#license)
-        * [Contribution](#contribution)
-        * [Questions](#github)
-
         ##Description 
-        A website that lets you post words
+              A CMS-style blog site where developers can publish their blog posts and comment on other developers posts as well. 
         ##Installation
         git clone
         ##Usage
-        browser
-        ##License
-        N/A
-        ##Contribution
-        N/A
-        ##Tests
-        N/A
-        ##Questions
+        browser or deployed Heroku site
         GitHub: Konopie
         email: codycooper06@gmail.com
         
