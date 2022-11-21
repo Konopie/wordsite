@@ -28,12 +28,6 @@
     
 }
 
-#logout{
-    margin-bottom: 10px;
-    padding: 0 5px 0 5px;
-    
-}
-
 #logout > *{
     text-decoration: none;
     color: black;
