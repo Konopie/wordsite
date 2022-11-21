@@ -5,16 +5,16 @@ dashBtn.addEventListener('click', ()=>{
 })
 
 async function logIn() {
-    const response = await fetch('/api/user/logIn', {
-      method: 'post',
-      headers: { 'Content-Type': 'application/json' }
-    });
+    // const response = await fetch('/api/user/logIn', {
+    //   method: 'post',
+    //   headers: { 'Content-Type': 'application/json' }
+    // });
   
-    if (response.ok) {
-      document.location.replace('/login');
-    } else {
-      alert(response.statusText);
-    }
+    // if (response.ok) {
+      document.location.replace('/posts');
+    // } else {
+    //   alert(response.statusText);
+    // }
   }
   
   document.querySelector('#logIn').addEventListener('click', logIn);
