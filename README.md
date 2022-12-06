@@ -6,7 +6,7 @@
         ##Installation 
         git clone 
         ##Usage 
-        browser or deployed Heroku site 
+        Start server and use in browser or deployed Heroku site 
         GitHub: Konopie 
         email: codycooper06@gmail.com 
         
